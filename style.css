@@ -16,20 +16,22 @@ html, body{
     height: 20px;
     width: 20px;
     background-color: #95C11E;
+    border-radius: 50%;
     position: fixed;
     z-index: 99;
-    border-radius: 50%;
+    transition: all linear 0.1s;
 }
 
 #cursor-blur{
     height: 400px;
     width: 400px;
     background-color: #96c11e3c;
+    border-radius: 50%;
     position: fixed;
     /* z-index: 99; */
     filter: blur(50px);
     z-index: 9;
-    border-radius: 50%;
+    transition: all linear 0.4s;
 }
 
 #nav{
@@ -111,6 +113,7 @@ video{
 #page2{
     min-height: 100vh;
     width: 100%;
+    z-index: 10;
 }
 
 #scroller{
@@ -134,19 +137,11 @@ video{
     display: inline-block;
     white-space: nowrap;
     animation: scroll;
-    animation-duration: 30s;
+    animation-duration: 40s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
-@keyframes scroll {
-    from{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(-100%);
-    }
-}
 
 #scroller h4{
     display: inline-block;
@@ -168,7 +163,7 @@ video{
     justify-content: space-around;
     padding: 0 50px;
     position: relative;
-    z-index: 9.9;
+    z-index: 10;
 }
 
 #about-us img{
@@ -271,7 +266,19 @@ video{
 
 #green-div h4{
     text-align: center;
+    line-height: 50px;
+    color: #000;
+    font-weight: 800;
     width: 100%;
-    font-size: 23px;
+    font-size: 27px;
     text-transform: uppercase;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
 }

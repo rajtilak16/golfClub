@@ -10,6 +10,19 @@ document.addEventListener("mousemove", function(dts){
     crsrblr.style.top = dts.y - 200 + "px"
 })
 
+var h4all = document.querySelectorAll("#nav h4");
+h4all.forEach( (elem) => {
+    elem.addEventListener("mouseenter", function(){
+        crsr.style.scale = 3
+        crsr.style.border = "1px solid #fff"
+        crsr.style.backgroundColor = "transparent"
+    })
+    elem.addEventListener("mouseleave", function(){
+        crsr.style.scale = 1
+        crsr.style.border = "0px solid #95c11e"
+        crsr.style.backgroundColor = "#95c11e"
+    })
+});
 gsap.to('#nav',{
     backgroundColor: "#000",
     height: "110px",
@@ -33,5 +46,33 @@ gsap.to("#main", {
         start: "top -30%",
         end: "top -80%",
         scrub: 2
+    }
+})
+
+gsap.from("#about-us img, #about-us-in",{
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.4,
+    scrollTrigger: {
+        trigger: "#about-us",
+        scroller: "body",
+        start: "top 60%",
+        end: "top 58%",
+        scrub: 3,
+    }
+})
+
+gsap.from(".cards",{
+    scale: 0.8,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.4,
+    scrollTrigger: {
+        trigger: ".cards",
+        scroller: "body",
+        start: "top 60%",
+        end: "top 58%",
+        scrub: 3,
     }
 })
