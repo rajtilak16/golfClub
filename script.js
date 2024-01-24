@@ -42,7 +42,7 @@ gsap.to("#main", {
     scrollTrigger:{
         trigger: "#main",
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top -30%",
         end: "top -80%",
         scrub: 2
@@ -73,6 +73,17 @@ gsap.from(".cards",{
         scroller: "body",
         start: "top 60%",
         end: "top 58%",
+        scrub: 3,
+    }
+})
+
+gsap.from("#page4 h1", {
+    y:50,
+    scrollTrigger: {
+        trigger: "#page4 h1",
+        scroller: "body",
+        start: "top 98%",
+        end: "top 94%",
         scrub: 3,
     }
 })
